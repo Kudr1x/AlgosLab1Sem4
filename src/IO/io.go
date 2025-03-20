@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func WriteEncodedFile(filename string, data []byte, M int) error {
+func WriteWithMetadata(filename string, data []byte, M int) error {
 	file, err := os.Create(filename)
 	if err != nil {
 		return err
@@ -24,7 +24,7 @@ func WriteEncodedFile(filename string, data []byte, M int) error {
 	return nil
 }
 
-func ReadEncodedFile(filename string) ([]byte, int, error) {
+func ReadWithMetadata(filename string) ([]byte, int, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return nil, 0, err
