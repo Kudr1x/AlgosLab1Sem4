@@ -10,18 +10,8 @@ import (
 )
 
 const (
-	blockSize = 1024 * 200
+	blockSize = 1024 * 1000
 )
-
-type BlockHeader struct {
-	Position uint64
-	DataSize uint64
-}
-
-type rotation struct {
-	Data []byte
-	Num  int
-}
 
 func Encode(S []byte) ([]byte, int) {
 	N := len(S)
