@@ -40,9 +40,9 @@ func createFiles() []string {
 	return []string{
 		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/text/enwik7",
 		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/text/rutext",
-		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/bw.png",
-		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/gray.png",
-		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/color.png",
+		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/raw.bw",
+		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/raw.color",
+		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/image/raw.gray",
 		"/home/kudrix/GolandProjects/AlgosLab1Sem4/datasets/bin/bin.apk",
 	}
 }
@@ -148,7 +148,7 @@ func processCompression(c compressors.Compressor, file string) (CompressionResul
 }
 
 func writeCSV(results []CompressionResult) {
-	file, err := os.Create("/home/kudrix/GolandProjects/AlgosLab1Sem4v2/results/compression_stats.csv")
+	file, err := os.Create("/home/kudrix/GolandProjects/AlgosLab1Sem4/results/compression_stats.csv")
 	if err != nil {
 		panic(err)
 	}

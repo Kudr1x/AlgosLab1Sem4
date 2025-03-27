@@ -120,7 +120,7 @@ func inverseBWT(last []byte, primary uint32) ([]byte, error) {
 		next[i] = cumul[symbol] + occ[symbol]
 		occ[symbol]++
 	}
-	// Восстанавливаем исходный блок, идя по цепочке next, начиная с primary.
+
 	res := make([]byte, n)
 	idx := int(primary)
 	for i := n - 1; i >= 0; i-- {
